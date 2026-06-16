@@ -8,9 +8,8 @@ import Scrolltop from './Pages/Scrolltop.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
    <StrictMode>
-    <Scrolltop>
+    <Scrolltop/>
     <App />
-    </Scrolltop>
   </StrictMode>
   </BrowserRouter>
  
