@@ -1,50 +1,13 @@
-// import React from 'react'
-// import Header from './Components/Header'
-// import Footer from './Components/Footer'
-// import Home from "./Pages/Home"
-// import About from './Pages/About'
-// import Contact from './Pages/Contact'
-// import { Route, Routes } from 'react-router-dom'
-// import Courses from './Pages/Courses'
-// import HundredBooks from './Pages/Hundredbooks'
-// import NLPMastery from './Pages/NLPMastery'
-// import My25thHour from './Pages/My25thHour'
-// import BrainKiBaat from './Pages/Brainkibaat'
-
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Header />
-//       <Routes>
-//         <Route path='/' element={<Home />} />
-//         <Route path='/about' element={<About />} />
-//         <Route path='/courses' element={<Courses/>}/>
-//         <Route path='/contact' element={<Contact/>}/>
-//       </Routes>
-//       <HundredBooks/>
-//       <NLPMastery/>
-//       <My25thHour/>
-//       <BrainKiBaat/>
-//       <Footer />
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-
 import {  Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home"
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 // Pages
 import Courses from "./pages/Courses";
-import HundredBooks from "./pages/HundredBooks";
+import HundredBooks from "./pages/Hundredbooks";
 import NLPMastery from "./pages/NLPMastery";
 import My25thHour from "./pages/My25thHour";
-import BrainKiBaat from "./pages/BrainKiBaat";
+import BrainKiBaat from "./pages/Brainkibaat";
 
 // Shared Navbar (yours)
 import Header from './Components/Header'
