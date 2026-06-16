@@ -108,7 +108,7 @@ const Header = () => {
             </NavLink>
           ))}
           <a
-            href="https://wa.me/your-number"
+            href="https://wa.me/919552782037"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 flex items-center justify-center gap-2 text-white text-sm font-semibold px-4 py-3 rounded-md transition-opacity duration-200 hover:opacity-90"
