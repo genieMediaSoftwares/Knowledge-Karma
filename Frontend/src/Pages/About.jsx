@@ -200,7 +200,7 @@ const About = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/your-number"
+                href="https://wa.me/919552782037"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-semibold text-white text-sm transition-opacity hover:opacity-90"
@@ -632,7 +632,7 @@ const About = () => {
             <p className="text-gray-300 text-sm mb-1">And now they are free.</p>
             <p className="text-gray-300 text-sm mb-6">That is the whole story.</p>
             <a
-              href="https://wa.me/your-number"
+              href="https://wa.me/919552782037"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-semibold text-white text-sm transition-opacity hover:opacity-90"
@@ -702,7 +702,7 @@ const About = () => {
           </div>
           <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
             <a
-              href="https://wa.me/your-number"
+              href="https://wa.me/919552782037"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md font-semibold text-white text-sm transition-opacity hover:opacity-90"

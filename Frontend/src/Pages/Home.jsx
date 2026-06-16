@@ -144,7 +144,7 @@ const Home = () => {
                 Explore Courses <ChevronRight size={16} />
               </Link>
               
-           <a     href="https://wa.me/your-number"
+           <a     href="https://wa.me/919552782037"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md font-semibold text-white text-sm transition-opacity hover:opacity-90"
@@ -342,7 +342,7 @@ const Home = () => {
         style={{ backgroundColor: "#15803d" }}
       >
         
-      <a    href="https://wa.me/your-number"
+      <a    href="https://wa.me/919552782037"
           target="_blank"
           rel="noopener noreferrer"
           className="max-w-6xl mx-auto flex items-center justify-center gap-2 sm:gap-3 text-white font-semibold text-xs sm:text-sm md:text-base hover:opacity-90 transition-opacity text-center"

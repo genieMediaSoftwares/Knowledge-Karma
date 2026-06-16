@@ -12,6 +12,7 @@ import Brainkibaat from "./Pages/Brainkibaat";
 // Shared Navbar (yours)
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import SocialMedia from "./Components/SocialMedia";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
 
         {/* Fallback — redirect unknown paths to courses */}
       </Routes>
+      <SocialMedia/>
       <Footer/>
       </>
   );

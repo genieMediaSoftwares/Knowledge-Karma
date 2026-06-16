@@ -319,7 +319,7 @@ export default function NLPMastery() {
 
           {/* WhatsApp */}
           <a
-            href="#"
+           href="https://wa.me/919552782037"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
               background: "linear-gradient(90deg, #16A34A, #15803d)",

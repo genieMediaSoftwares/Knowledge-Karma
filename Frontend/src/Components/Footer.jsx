@@ -47,7 +47,7 @@ const Footer = () => {
     <footer style={{ backgroundColor: "#0d1b3e" }} className="text-white w-full">
       {/* Main Footer Grid */}
       <div className="max-w-6xl mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Col 1 — Brand */}
           <div className="flex flex-col gap-3">
@@ -92,13 +92,14 @@ const Footer = () => {
             <h3 className="text-base font-semibold text-white mb-2">Connect With Us</h3>
             <div className="flex items-center gap-3 flex-wrap">
               {socialLinks.map(({ icon, href, bg, label }) => (
-                <a
-                  key={label}
+                
+              <a    key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: bg }}
+                  className="w-8 h-8 rounded-full flex items-center justify-center"
+                  style={{ background: bg }}
                 >
                   {icon}
                 </a>
@@ -112,18 +113,19 @@ const Footer = () => {
             <p className="text-sm text-gray-300 leading-relaxed">
               Join our WhatsApp group for updates, free resources and live session alerts.
             </p>
-            <a
-              href="https://wa.me/your-number"
+        <a    
+              href="https://wa.me/919552782037"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-1 inline-flex items-center gap-2 text-white text-sm font-semibold px-4 py-2.5 rounded-md border border-green-500 hover:bg-green-500 transition-colors duration-200 w-fit"
               style={{ borderColor: "#25d366" }}
             >
               <FaWhatsapp size={18} style={{ color: "#25d366" }} />
-              Join WhatsApp Group
+              Join WhatsApp
               <FaChevronRight size={12} />
             </a>
           </div>
+
         </div>
       </div>
 
