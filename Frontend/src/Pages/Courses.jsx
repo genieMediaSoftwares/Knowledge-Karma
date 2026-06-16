@@ -17,7 +17,7 @@ const courses = [
     plainTitle: "How to Read 100 Books in a Year",
     description:
       "Learn Speed Reading, Memory Techniques, Mind Maps and Creative Thinking.",
-    tag: "Most Popular",
+   
     duration: "6 Weeks",
     level: "Beginner",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png",
@@ -41,7 +41,7 @@ const courses = [
     plainTitle: "NLP Mastery",
     description:
       "Master the art of communication, influence and personal transformation with NLP.",
-    tag: "Trending",
+   
     duration: "8 Weeks",
     level: "Intermediate",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27b9ea2becc_1780988394_pavanbhattadcards-5.png",
@@ -62,7 +62,7 @@ const courses = [
     ),
     plainTitle: "My 25th Hour",
     description: "Learn the Art of Creating Time.",
-    tag: "New",
+  
     duration: "4 Weeks",
     level: "All Levels",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bab564737_1780988597_pavanbhattadcards-4.png",
@@ -84,7 +84,7 @@ const courses = [
     plainTitle: "Brain Ki Baat",
     description:
       "Understand how your brain works and reprogram it for success and happiness.",
-    tag: "Featured",
+   
     duration: "5 Weeks",
     level: "All Levels",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a23a5730236d_1780721011_l-3.png",
@@ -179,10 +179,7 @@ function CourseCard({ course }) {
         {course.number}
       </div>
 
-      {/* Tag pill — top right */}
-      <div className="absolute top-4 right-4 z-10">
-        <MetaPill label={course.tag} color={course.tagColor} bg={course.tagBg} />
-      </div>
+     
 
       {/* Top: Image + Title + Description */}
       <div className="flex flex-col gap-4">
