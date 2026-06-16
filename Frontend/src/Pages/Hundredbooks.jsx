@@ -102,7 +102,7 @@ function SecretCard({ secret }) {
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
-export default function HundredBooks() {
+export default function Hundredbooks() {
   return (
     <div
       className="min-h-screen w-full"

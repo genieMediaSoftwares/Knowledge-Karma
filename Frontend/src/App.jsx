@@ -25,13 +25,12 @@ export default function App() {
          <Route path='/about' element={<About />} />
         <Route path='/courses' element={<Courses/>}/>
          <Route path='/contact' element={<Contact/>}/>
-        <Route path="/courses" element={<Courses />} />
 
         {/* Individual course detail pages */}
-        <Route path="/courses/how-to-read-100-books" element={<HundredBooks />} />
+        <Route path="/courses/how-to-read-100-books" element={<Hundredbooks />} />
         <Route path="/courses/nlp-mastery"           element={<NLPMastery />} />
         <Route path="/courses/my-25th-hour"          element={<My25thHour />} />
-        <Route path="/courses/brain-ki-baat"         element={<BrainKiBaat />} />
+        <Route path="/courses/brain-ki-baat"         element={<Brainkibaat />} />
 
         {/* Fallback — redirect unknown paths to courses */}
       </Routes>

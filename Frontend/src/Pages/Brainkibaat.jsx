@@ -104,7 +104,7 @@ function TrainingCard({ point, showDivider }) {
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
-export default function BrainKiBaat() {
+export default function Brainkibaat() {
   return (
     <div
       className="min-h-screen w-full"
