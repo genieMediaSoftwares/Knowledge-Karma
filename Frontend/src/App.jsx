@@ -3,11 +3,11 @@ import Home from "./Pages/Home"
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 // Pages
-import Courses from "./pages/Courses";
-import HundredBooks from "./pages/Hundredbooks";
-import NLPMastery from "./pages/NLPMastery";
-import My25thHour from "./pages/My25thHour";
-import BrainKiBaat from "./pages/Brainkibaat";
+import Courses from "./Pages/Courses";
+import Hundredbooks from "./Pages/Hundredbooks";
+import NLPMastery from "./Pages/NLPMastery";
+import My25thHour from "./Pages/My25thHour";
+import Brainkibaat from "./Pages/Brainkibaat";
 
 // Shared Navbar (yours)
 import Header from './Components/Header'
