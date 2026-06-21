@@ -19,19 +19,19 @@ import {
 const trainingPoints = [
   {
     id: 1,
-    icon: <Users size={26} strokeWidth={1.5} style={{ color: "#C084FC" }} />,
+    icon: <Users size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
     title: "Communication",
     desc: "Every word you use is shaping how you think and how others respond to you. Learn how language actually works in the brain and use it with far more precision and impact.",
   },
   {
     id: 2,
-    icon: <UserCheck size={26} strokeWidth={1.5} style={{ color: "#C084FC" }} />,
+    icon: <UserCheck size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
     title: "Influence",
     desc: "Influence is the ability to connect, lead, and move people toward better outcomes. Learn how it works so you can use it with integrity and spot when it is being used on you.",
   },
   {
     id: 3,
-    icon: <RefreshCw size={26} strokeWidth={1.5} style={{ color: "#C084FC" }} />,
+    icon: <RefreshCw size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
     title: "Personal Transformation",
     desc: "The patterns running your life right now were formed without your permission. NLP gives you the tools to find them, understand them, and replace the ones that hold you back.",
   },
@@ -46,10 +46,10 @@ const learnings = [
 ];
 
 const audience = [
-  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Professionals and Leaders" },
-  { icon: <MessageSquare size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Sales and Marketing Teams" },
-  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Students and Graduates" },
-  { icon: <Heart size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Anyone who wants to communicate better and lead better" },
+  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Professionals and Leaders" },
+  { icon: <MessageSquare size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Sales and Marketing Teams" },
+  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Students and Graduates" },
+  { icon: <Heart size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Anyone who wants to communicate better and lead better" },
 ];
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -57,7 +57,7 @@ const audience = [
 function FeatureBadge({ icon, label, value }) {
   return (
     <div className="flex items-center gap-3">
-      <div style={{ color: "#C084FC" }}>{icon}</div>
+      <div style={{ color: "#60A5FA" }}>{icon}</div>
       <div>
         <p className="text-xs leading-none mb-0.5" style={{ color: "#94a3b8" }}>{label}</p>
         <p className="text-sm font-bold leading-none" style={{ color: "#fff" }}>{value}</p>
@@ -76,8 +76,8 @@ function TrainingCard({ point, showDivider }) {
           style={{
             width: 52,
             height: 52,
-            background: "linear-gradient(135deg, #3b0764 0%, #4c1d95 100%)",
-            border: "1.5px solid #7c3aed55",
+            background: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)",
+            border: "1.5px solid #2563eb55",
           }}
         >
           {point.icon}
@@ -123,7 +123,7 @@ export default function NLPMastery() {
 
         {/* ── Breadcrumb ── */}
         <nav className="flex items-center gap-2 text-sm mb-6">
-          <a href="/courses" style={{ color: "#C084FC", textDecoration: "none", fontWeight: 500 }}>
+          <a href="/courses" style={{ color: "#60A5FA", textDecoration: "none", fontWeight: 500 }}>
             Courses
           </a>
           <ChevronRight size={14} style={{ color: "#64748b" }} />
@@ -140,16 +140,16 @@ export default function NLPMastery() {
             <div
               className="rounded-2xl p-6 relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-                border: "1.5px solid #3b1a6e",
+                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                border: "1.5px solid #1e3a6e",
               }}
             >
               {/* Number badge */}
               <div
-                className="absolute top-4 left-4 w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm z-10"
-                style={{ background: "#7C3AED" }}
+                className="absolute top-4 left-4 w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                style={{ background: "#2563EB" }}
               >
-                2
+                4
               </div>
 
               {/* Image + Title row */}
@@ -157,14 +157,15 @@ export default function NLPMastery() {
                 {/* Course image */}
                 <div className="flex-shrink-0">
                   <img
-                    src="https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27b9ea2becc_1780988394_pavanbhattadcards-5.png"
+                    src="https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764321/c91421f9-9b93-44ba-92b2-7717821224e8_outh5b.jpg"
                     alt="NLP glowing brain"
                     className="rounded-xl object-contain"
                     style={{
                       width: 180,
                       height: 200,
-                      background: "#0d0618",
-                      border: "1px dashed #7c3aed44",
+                      background: "#0a1628",
+                      /* Remove below border once real image is added */
+                      border: "1px dashed #2563eb44",
                     }}
                     onError={(e) => {
                       e.target.style.display = "none";
@@ -178,9 +179,9 @@ export default function NLPMastery() {
                       width: 180,
                       height: 200,
                       display: "none",
-                      background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
-                      border: "1px dashed #7c3aed88",
-                      color: "#C084FC",
+                      background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                      border: "1.5px solid #1e3a6e",
+                      color: "#60A5FA",
                     }}
                   >
                     <span style={{ fontSize: 56 }}>🧠</span>
@@ -193,7 +194,7 @@ export default function NLPMastery() {
                   <h1
                     className="font-extrabold leading-tight"
                     style={{
-                      color: "#C084FC",
+                      color: "#60A5FA",
                       fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
                       textShadow: "0 0 30px rgba(192,132,252,0.4)",
                     }}
@@ -211,8 +212,8 @@ export default function NLPMastery() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-                border: "1.5px solid #3b1a6e",
+                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                border: "1.5px solid #1e3a6e",
               }}
             >
               <div className="flex flex-row flex-wrap gap-x-8 gap-y-4">
@@ -226,11 +227,11 @@ export default function NLPMastery() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-                border: "1.5px solid #3b1a6e",
+                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                border: "1.5px solid #1e3a6e",
               }}
             >
-              <h2 className="font-bold text-lg mb-4" style={{ color: "#C084FC" }}>
+              <h2 className="font-bold text-lg mb-4" style={{ color: "#60A5FA" }}>
                 What You Will Learn
               </h2>
               <ul className="flex flex-col gap-3">
@@ -240,7 +241,7 @@ export default function NLPMastery() {
                       size={20}
                       strokeWidth={1.8}
                       className="flex-shrink-0 mt-0.5"
-                      style={{ color: "#C084FC" }}
+                      style={{ color: "#60A5FA" }}
                     />
                     <span className="text-sm leading-relaxed" style={{ color: "#cbd5e1" }}>
                       {item}
@@ -258,11 +259,11 @@ export default function NLPMastery() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-                border: "1.5px solid #3b1a6e",
+                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                border: "1.5px solid #1e3a6e",
               }}
             >
-              <p className="font-semibold text-base mb-5 italic" style={{ color: "#C084FC" }}>
+              <p className="font-semibold text-base mb-5 italic" style={{ color: "#60A5FA" }}>
                 In this free training, you will learn...
               </p>
               <div className="flex flex-col gap-5">
@@ -280,11 +281,11 @@ export default function NLPMastery() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-                border: "1.5px solid #3b1a6e",
+                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+                border: "1.5px solid #1e3a6e",
               }}
             >
-              <h2 className="font-bold text-lg mb-4" style={{ color: "#C084FC" }}>
+              <h2 className="font-bold text-lg mb-4" style={{ color: "#60A5FA" }}>
                 Who Should Join?
               </h2>
               <ul className="flex flex-col gap-3">
@@ -306,9 +307,9 @@ export default function NLPMastery() {
             href="#"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
-              background: "linear-gradient(90deg, #7C3AED, #6d28d9)",
+              background: "linear-gradient(90deg, #2563EB, #1d4ed8)",
               textDecoration: "none",
-              boxShadow: "0 4px 20px rgba(124,58,237,0.4)",
+              boxShadow: "0 4px 20px rgba(37,99,235,0.35)",
             }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
@@ -319,7 +320,7 @@ export default function NLPMastery() {
 
           {/* WhatsApp */}
           <a
-           href="https://wa.me/919552782037"
+            href="https://wa.me/919552782037"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
               background: "linear-gradient(90deg, #16A34A, #15803d)",

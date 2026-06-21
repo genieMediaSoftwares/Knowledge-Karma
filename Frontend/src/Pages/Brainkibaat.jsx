@@ -47,11 +47,11 @@ const learnings = [
 ];
 
 const audience = [
-  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#F97316" }} />, label: "Students" },
-  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#F97316" }} />, label: "Professionals" },
-  { icon: <Briefcase size={20} strokeWidth={1.5} style={{ color: "#F97316" }} />, label: "Entrepreneurs" },
-  { icon: <Frown size={20} strokeWidth={1.5} style={{ color: "#F97316" }} />, label: "Anyone feeling stuck" },
-  { icon: <BookOpen size={20} strokeWidth={1.5} style={{ color: "#F97316" }} />, label: "Anyone who wants to understand their mind better" },
+  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Students" },
+  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Professionals" },
+  { icon: <Briefcase size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Entrepreneurs" },
+  { icon: <Frown size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Anyone feeling stuck" },
+  { icon: <BookOpen size={20} strokeWidth={1.5} style={{ color: "#C084FC" }} />, label: "Anyone who wants to understand their mind better" },
 ];
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -59,9 +59,9 @@ const audience = [
 function FeatureBadge({ icon, label, value }) {
   return (
     <div className="flex items-center gap-3">
-      <div style={{ color: "#F97316" }}>{icon}</div>
+      <div style={{ color: "#C084FC" }}>{icon}</div>
       <div>
-        <p className="text-xs leading-none mb-0.5" style={{ color: "#a16207" }}>{label}</p>
+        <p className="text-xs leading-none mb-0.5" style={{ color: "#94a3b8" }}>{label}</p>
         <p className="text-sm font-bold leading-none" style={{ color: "#fff" }}>{value}</p>
       </div>
     </div>
@@ -79,9 +79,9 @@ function TrainingCard({ point, showDivider }) {
             width: 52,
             height: 52,
             minWidth: 52,
-            background: "linear-gradient(135deg, #c2410c 0%, #ea580c 100%)",
-            border: "1.5px solid #f9731655",
-            boxShadow: "0 0 12px rgba(249,115,22,0.3)",
+            background: "linear-gradient(135deg, #3b0764 0%, #4c1d95 100%)",
+            border: "1.5px solid #7c3aed55",
+            boxShadow: "0 4px 20px rgba(124,58,237,0.4)",
           }}
         >
           {point.icon}
@@ -96,7 +96,7 @@ function TrainingCard({ point, showDivider }) {
         </div>
       </div>
       {showDivider && (
-        <div className="mt-5" style={{ borderTop: "1px solid #431407" }} />
+        <div className="mt-5" style={{borderTop: "1px solid #3b1a6e"  }} />
       )}
     </div>
   );
@@ -117,7 +117,7 @@ export default function Brainkibaat() {
       <div
         className="fixed inset-0 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(249,115,22,0.04) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(192,132,252,0.04) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
           zIndex: 0,
         }}
@@ -127,10 +127,10 @@ export default function Brainkibaat() {
 
         {/* ── Breadcrumb ── */}
         <nav className="flex items-center gap-2 text-sm mb-6">
-          <a href="/courses" style={{ color: "#F97316", textDecoration: "none", fontWeight: 500 }}>
+          <a href="/courses" style={{ color: "#C084FC", textDecoration: "none", fontWeight: 500 }}>
             Courses
           </a>
-          <ChevronRight size={14} style={{ color: "#7c2d12" }} />
+          <ChevronRight size={14} style={{ color: "#64748b" }} />
           <span style={{ color: "#d1d5db" }}>Brain Ki Baat</span>
         </nav>
 
@@ -144,16 +144,16 @@ export default function Brainkibaat() {
             <div
               className="rounded-2xl p-6 relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-                border: "1.5px solid #431407",
+                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+                border: "1.5px solid #3b1a6e",
               }}
             >
               {/* Number badge */}
               <div
                 className="absolute top-4 left-4 w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm z-10"
-                style={{ background: "#EA580C" }}
+                style={{ background: "#7C3AED" }}
               >
-                4
+                2
               </div>
 
               {/* Image + Title row */}
@@ -161,14 +161,14 @@ export default function Brainkibaat() {
                 {/* Course image */}
                 <div className="flex-shrink-0">
                   <img
-                    src="https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a23a5730236d_1780721011_l-3.png"
+                    src="https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764273/a7d241a8-3a72-4341-a297-8b380ee84f5e_avvjom.jpg"
                     alt="Glowing orange brain"
                     className="rounded-xl object-contain"
                     style={{
                       width: 180,
                       height: 210,
-                      background: "#120900",
-                      border: "1px dashed #ea580c44",
+                      background: "#0d0618",
+                      border: "1px dashed #7c3aed44",
                     }}
                     onError={(e) => {
                       e.target.style.display = "none";
@@ -182,13 +182,13 @@ export default function Brainkibaat() {
                       width: 180,
                       height: 210,
                       display: "none",
-                      background: "linear-gradient(135deg, #7c2d1244, #c2410c44)",
-                      border: "1px dashed #ea580c88",
-                      color: "#F97316",
+                      background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
+                      border: "1px dashed #7c3aed88",
+                      color: "#C084FC",
                     }}
                   >
                     <span style={{ fontSize: 56 }}>🧠</span>
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, color: "#F97316" }}>BRAIN KI BAAT</span>
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, color: "#C084FC" }}>BRAIN KI BAAT</span>
                   </div>
                 </div>
 
@@ -197,9 +197,9 @@ export default function Brainkibaat() {
                   <h1
                     className="font-extrabold leading-tight"
                     style={{
-                      color: "#F97316",
+                      color: "#C084FC",
                       fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
-                      textShadow: "0 0 30px rgba(249,115,22,0.35)",
+                      textShadow: "0 0 30px rgba(192,132,252,0.4)",
                     }}
                   >
                     Brain Ki Baat
@@ -218,8 +218,8 @@ export default function Brainkibaat() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-                border: "1.5px solid #431407",
+                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+                border: "1.5px solid #3b1a6e",
               }}
             >
               <div className="flex flex-row flex-wrap gap-x-8 gap-y-4">
@@ -233,11 +233,11 @@ export default function Brainkibaat() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-                border: "1.5px solid #431407",
+                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+                border: "1.5px solid #3b1a6e",
               }}
             >
-              <h2 className="font-bold text-lg mb-4" style={{ color: "#F97316" }}>
+              <h2 className="font-bold text-lg mb-4" style={{ color: "#C084FC" }}>
                 What You Will Learn
               </h2>
               <ul className="flex flex-col gap-3">
@@ -247,7 +247,7 @@ export default function Brainkibaat() {
                       size={20}
                       strokeWidth={1.8}
                       className="flex-shrink-0 mt-0.5"
-                      style={{ color: "#F97316" }}
+                      style={{ color: "#C084FC" }}
                     />
                     <span className="text-sm leading-relaxed" style={{ color: "#e2e8f0" }}>
                       {item}
@@ -265,11 +265,11 @@ export default function Brainkibaat() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-                border: "1.5px solid #431407",
+                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+                border: "1.5px solid #3b1a6e",
               }}
             >
-              <p className="font-semibold text-base mb-6 italic" style={{ color: "#F97316" }}>
+              <p className="font-semibold text-base mb-6 italic" style={{ color: "#C084FC" }}>
                 In this free training, you will learn...
               </p>
               <div className="flex flex-col gap-5">
@@ -287,11 +287,11 @@ export default function Brainkibaat() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-                border: "1.5px solid #431407",
+                background: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+                border: "1.5px solid #3b1a6e",
               }}
             >
-              <h2 className="font-bold text-lg mb-4" style={{ color: "#F97316" }}>
+              <h2 className="font-bold text-lg mb-4" style={{ color: "#C084FC" }}>
                 Who Should Join?
               </h2>
               <ul className="flex flex-col gap-3">
@@ -313,9 +313,9 @@ export default function Brainkibaat() {
             href="#"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
-              background: "linear-gradient(90deg, #EA580C, #c2410c)",
+              background: "linear-gradient(90deg, #7C3AED, #6d28d9)",
               textDecoration: "none",
-              boxShadow: "0 4px 20px rgba(234,88,12,0.4)",
+              boxShadow: "0 4px 20px rgba(124,58,237,0.4)",
             }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}

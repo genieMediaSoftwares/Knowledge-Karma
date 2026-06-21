@@ -119,21 +119,22 @@ const Home = () => {
           {/* Hero text */}
           <div className="flex-1 text-white text-center md:text-left pb-6 md:pb-0">
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mb-2">
-              School gives you{" "}
-              <span className="font-extrabold italic" style={{ color: "#4d9fff" }}>
-                knowledge.
-              </span>
+              Learn. Grow. Evolve & Liberate.{" "}
+
             </h1>
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mb-4">
-              Pavan teaches you{" "}
+              Your Learning Mentor{" "}<br/>
               <span className="font-extrabold italic" style={{ color: "#e91e8c" }}>
-                what to do with it.
+                — Pavan Bhattad
               </span>
             </h1>
             <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Speed reading. Memory. Focus. Influence.
+              Knowledge and Karma is a Learning Philanthropy project — where genuine education meets generous access.
+              Premium courses conducted before Covid are now available as free live sessions for everyone who wants to grow.
               <br className="hidden sm:block" />
-              Brain science. All free.
+              We aren't here to teach — we're here to help you transform. Come, let's do this together.
+              
+             
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link
@@ -143,8 +144,8 @@ const Home = () => {
               >
                 Explore Courses <ChevronRight size={16} />
               </Link>
-              
-           <a     href="https://wa.me/919552782037"
+
+              <a href="https://wa.me/919552782037"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md font-semibold text-white text-sm transition-opacity hover:opacity-90"
@@ -341,8 +342,8 @@ const Home = () => {
         className="w-full py-4 px-4 sm:px-6"
         style={{ backgroundColor: "#15803d" }}
       >
-        
-      <a    href="https://wa.me/919552782037"
+
+        <a href="https://wa.me/919552782037"
           target="_blank"
           rel="noopener noreferrer"
           className="max-w-6xl mx-auto flex items-center justify-center gap-2 sm:gap-3 text-white font-semibold text-xs sm:text-sm md:text-base hover:opacity-90 transition-opacity text-center"

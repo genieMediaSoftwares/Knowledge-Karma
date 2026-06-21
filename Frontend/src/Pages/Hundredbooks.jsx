@@ -159,7 +159,7 @@ export default function Hundredbooks() {
                 {/* Course image */}
                 <div className="flex-shrink-0">
                   <img
-                    src="https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png"
+                    src="https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764265/bd73ab8f-c519-49b1-bc9d-2cad86170a99_tsxjpv.jpg"
                     alt="Stack of glowing books"
                     className="rounded-xl object-contain"
                     style={{
@@ -197,7 +197,7 @@ export default function Hundredbooks() {
                     className="font-extrabold leading-tight"
                     style={{ color: "#ffffff", fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}
                   >
-                    How to Read{" "}
+                    How to Read{" "}<br/>
                     <span style={{ color: "#F5A623" }}>100 Books</span>
                     <br />in a Year
                   </h1>

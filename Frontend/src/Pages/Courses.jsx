@@ -20,7 +20,7 @@ const courses = [
    
     duration: "6 Weeks",
     level: "Beginner",
-    image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png",
+    image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764265/bd73ab8f-c519-49b1-bc9d-2cad86170a99_tsxjpv.jpg",
     numberBg: "#2563EB",
     cardBg: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
     borderColor: "#1e3a6e",
@@ -29,13 +29,55 @@ const courses = [
     btnBg: "linear-gradient(90deg, #2563EB, #1d4ed8)",
     enrollUrl: "/courses/how-to-read-100-books",
   },
-  {
+   {
     id: 2,
     number: 2,
+    path: "/courses/brain-ki-baat",
+    title: (
+      <span style={{ color: "#A855F7" }}>Brain Ki Baat</span>
+    ),
+    plainTitle: "Brain Ki Baat",
+    description:
+      "Understand how your brain works and reprogram it for success and happiness.",
+   
+    duration: "5 Weeks",
+    level: "All Levels",
+    image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764273/a7d241a8-3a72-4341-a297-8b380ee84f5e_avvjom.jpg",
+    numberBg: "#7C3AED",
+ cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+    borderColor: "#3b1a6e",
+    tagColor: "#A855F7",
+    tagBg: "#3b1a6e44",
+    btnBg: "linear-gradient(90deg, #7C3AED, #6d28d9)",
+    enrollUrl: "/courses/brain-ki-baat",
+  },
+  {
+    id: 3,
+    number: 3,
+    path: "/courses/my-25th-hour",
+    title: (
+     <span style={{ color: "#A855F7" }}>My 25th Hour</span>
+    ),
+    plainTitle: "My 25th Hour",
+    description: "Learn the Art of Creating Time.",
+  
+    duration: "4 Weeks",
+    level: "All Levels",
+    image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764334/b0f0a21c-3c74-44b5-b76e-4759d3ff92fb_c0y8rc.jpg",
+   numberBg: "#7C3AED",
+ cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+    borderColor: "#3b1a6e",
+    tagColor: "#A855F7",
+    tagBg: "#3b1a6e44",
+    btnBg: "linear-gradient(90deg, #7C3AED, #6d28d9)",
+    enrollUrl: "/courses/my-25th-hour",
+  },{
+    id: 4,
+    number: 4,
     path: "/courses/nlp-mastery",
     title: (
       <>
-        <span style={{ color: "#A855F7" }}>NLP</span> Mastery
+      <span style={{ color: "#F5A623" }}>NLP</span> Mastery
       </>
     ),
     plainTitle: "NLP Mastery",
@@ -44,58 +86,16 @@ const courses = [
    
     duration: "8 Weeks",
     level: "Intermediate",
-    image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27b9ea2becc_1780988394_pavanbhattadcards-5.png",
-    numberBg: "#7C3AED",
-    cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
-    borderColor: "#3b1a6e",
-    tagColor: "#A855F7",
-    tagBg: "#3b1a6e44",
-    btnBg: "linear-gradient(90deg, #7C3AED, #6d28d9)",
+    image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764321/c91421f9-9b93-44ba-92b2-7717821224e8_outh5b.jpg",
+     numberBg: "#2563EB",
+    cardBg: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
+    borderColor: "#1e3a6e",
+    tagColor: "#2563EB",
+    tagBg: "#1e3a6e44",
+    btnBg: "linear-gradient(90deg, #2563EB, #1d4ed8)",
     enrollUrl: "/courses/nlp-mastery",
-  },
-  {
-    id: 3,
-    number: 3,
-    path: "/courses/my-25th-hour",
-    title: (
-      <span style={{ color: "#22C55E" }}>My 25th Hour</span>
-    ),
-    plainTitle: "My 25th Hour",
-    description: "Learn the Art of Creating Time.",
-  
-    duration: "4 Weeks",
-    level: "All Levels",
-    image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bab564737_1780988597_pavanbhattadcards-4.png",
-    numberBg: "#16A34A",
-    cardBg: "linear-gradient(135deg, #062017 0%, #031309 100%)",
-    borderColor: "#14532d",
-    tagColor: "#22C55E",
-    tagBg: "#14532d44",
-    btnBg: "linear-gradient(90deg, #16A34A, #15803d)",
-    enrollUrl: "/courses/my-25th-hour",
-  },
-  {
-    id: 4,
-    number: 4,
-    path: "/courses/brain-ki-baat",
-    title: (
-      <span style={{ color: "#F97316" }}>Brain Ki Baat</span>
-    ),
-    plainTitle: "Brain Ki Baat",
-    description:
-      "Understand how your brain works and reprogram it for success and happiness.",
-   
-    duration: "5 Weeks",
-    level: "All Levels",
-    image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a23a5730236d_1780721011_l-3.png",
-    numberBg: "#EA580C",
-    cardBg: "linear-gradient(135deg, #1c0e00 0%, #120900 100%)",
-    borderColor: "#7c2d12",
-    tagColor: "#F97316",
-    tagBg: "#7c2d1244",
-    btnBg: "linear-gradient(90deg, #EA580C, #c2410c)",
-    enrollUrl: "/courses/brain-ki-baat",
-  },
+  }
+ 
 ];
 
 // ── Course Image ─────────────────────────────────────────────────────────────

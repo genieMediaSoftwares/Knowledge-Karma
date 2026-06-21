@@ -179,7 +179,7 @@ const About = () => {
           <div className="flex-1 text-white order-2 md:order-1">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-snug mb-4">
               You have been using your{" "}
-              <span style={{ color: "#4d9fff" }}>brain</span> every day.
+              <span style={{ color: "#4d9fff" }}>mind</span> every day.
               <br />
               Without a manual.
             </h1>
@@ -190,14 +190,9 @@ const About = () => {
               Pavan Bhattad wrote one.
             </p>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-3 max-w-xl">
-              Two decades of training people to read faster, think clearly,
-              remember more, and actually use what they learn.
+              Knowledge and Karma is a Learning Philanthropy project by Pavan Bhattad - Your Learning Partner. Many courses conducted by Pavan before Covid at premium prices are now available as Live sessions for free. We aren't here to teach, but to help you Learn, Grow, Evolve and Liberate.  Come, let's do this together...
             </p>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
-              Thousands of people walked into his workshops as ordinary readers
-              and thinkers. Most walked out wondering why no school ever taught
-              them any of this.
-            </p>
+          
             <div className="flex flex-wrap gap-4">
               <a
                 href="https://wa.me/919552782037"
