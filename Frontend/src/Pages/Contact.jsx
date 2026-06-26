@@ -242,7 +242,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold hover:-translate-y-0.5 transition-all bg-whatsapp hover:bg-[#1ebd5b]"
               >
-                <FaWhatsapp size={16} /> WhatsApp · +91 96650 22037
+                <FaWhatsapp size={16} /> WhatsApp  +91 9665022037
               </a>
               <a
                 href={`mailto:${EMAIL}`}
@@ -270,8 +270,8 @@ const Contact = () => {
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-semibold border transition-all ${activeTab === tab
-                      ? "text-white"
-                      : "text-gray-500 hover:text-black"
+                    ? "text-white"
+                    : "text-gray-500 hover:text-black"
                     }`}
                   style={
                     activeTab === tab
@@ -371,8 +371,8 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 rounded-lg text-white text-xs font-heading font-bold transition-all duration-200 mt-1 hover:-translate-y-0.5 ${isWhatsApp
-                        ? "bg-whatsapp hover:bg-[#1ebd5b] shadow-lg shadow-whatsapp/20"
-                        : "bg-[#0D1F3C] hover:bg-black shadow-lg shadow-black/20"
+                      ? "bg-whatsapp hover:bg-[#1ebd5b] shadow-lg shadow-whatsapp/20"
+                      : "bg-[#0D1F3C] hover:bg-black shadow-lg shadow-black/20"
                       }`}
                   >
                     {btnLabel} <ChevronRight size={13} />
@@ -413,6 +413,15 @@ const Contact = () => {
                 </a>
               ))}
             </div>
+            <br />
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-white text-sm font-heading font-bold transition-all duration-200 bg-whatsapp hover:bg-[#1ebd5b] shadow-lg shadow-whatsapp/25 hover:-translate-y-0.5 w-fit"
+            >
+              <FaWhatsapp size={18} /> Join WhatsApp group <ChevronRight size={15} />
+            </a>
           </div>
 
           {/* Quote card */}
