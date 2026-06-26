@@ -166,33 +166,32 @@ const About = () => {
 
       {/* ══ HERO ══ */}
       <section
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden bg-white"
         style={{
-          background: "linear-gradient(135deg, #0D1F3C 0%, rgba(13,31,60,0.9) 100%)",
           minHeight: "380px",
         }}
       >
         {/* dot grid */}
         <div
-          className="absolute top-0 right-0 w-72 h-72 opacity-10 pointer-events-none"
+          className="absolute top-0 right-0 w-72 h-72 opacity-5 pointer-events-none"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #000 1px, transparent 1px)",
             backgroundSize: "18px 18px",
           }}
         />
         <div className="relative max-w-6xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center gap-10">
           {/* text */}
-          <div className="flex-1 text-white order-2 md:order-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4">
+          <div className="flex-1 text-[#0D1F3C] order-2 md:order-1">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold leading-tight mb-4 text-[#0D1F3C]">
               You have been using your{" "}
-              <span className="text-white/80">mind</span> every day.
+              <span className="text-[#0D1F3C]/80">mind</span> every day.
               <br />
               Without a manual.
             </h1>
-            <p className="text-2xl sm:text-3xl font-heading font-bold italic mb-5 text-white/90">
+            <p className="text-2xl sm:text-3xl font-heading font-bold italic mb-5 text-[#0D1F3C]">
               Pavan Bhattad wrote one.
             </p>
-            <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-3 max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3 max-w-xl">
               Knowledge and Karma is a Learning Philanthropy project by Pavan Bhattad - Your Learning Partner. Many courses conducted by Pavan before Covid at premium prices are now available as Live sessions for free. We aren't here to teach, but to help you Learn, Grow, Evolve and Liberate.  Come, let's do this together...
             </p>
 
@@ -226,16 +225,16 @@ const About = () => {
             >
               {/* glow */}
               <div
-                className="absolute inset-0 rounded-full opacity-20"
+                className="absolute inset-0 rounded-full opacity-10"
                 style={{
-                  background: "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(13,31,60,0.1) 0%, transparent 70%)",
                   filter: "blur(30px)",
                 }}
               />
               <ChartLine
                 size={130}
                 strokeWidth={0.8}
-                style={{ color: "rgba(255,255,255,0.6)", filter: "drop-shadow(0 0 18px rgba(255,255,255,0.2))" }}
+                style={{ color: "rgba(13,31,60,0.25)", filter: "drop-shadow(0 0 18px rgba(13,31,60,0.05))" }}
               />
             </div>
           </div>
@@ -570,20 +569,20 @@ const About = () => {
 
       {/* ══ WHY FREE ══ */}
       <section
-        className="w-full py-14 px-6"
-        style={{ backgroundColor: "#0d1040" }}
+        className="w-full py-14 px-6 bg-white"
+        style={{ borderTop: "1px solid rgba(13,31,60,0.08)", borderBottom: "1px solid rgba(13,31,60,0.08)" }}
       >
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
           {/* gift icon glow */}
           <div className="flex-shrink-0 flex items-center justify-center" style={{ width: 160, height: 160 }}>
             <div className="relative flex items-center justify-center" style={{ width: 140, height: 140 }}>
               <div
-                className="absolute inset-0 rounded-full opacity-40"
+                className="absolute inset-0 rounded-full opacity-10"
                 style={{ background: "radial-gradient(circle,#7c3aed,transparent 70%)", filter: "blur(20px)" }}
               />
               <div
                 className="w-24 h-24 rounded-full flex items-center justify-center"
-                style={{ border: "2px solid #c084fc", backgroundColor: "rgba(124,58,237,0.15)" }}
+                style={{ border: "2px solid #7c3aed", backgroundColor: "rgba(124,58,237,0.05)" }}
               >
                 <span className="text-4xl">🎁</span>
               </div>
@@ -591,17 +590,17 @@ const About = () => {
           </div>
 
           {/* why free text */}
-          <div className="flex-1 text-white">
-            <p className="text-xs font-semibold tracking-widest mb-1" style={{ color: "#c084fc" }}>
+          <div className="flex-1 text-[#0D1F3C]">
+            <p className="text-xs font-semibold tracking-widest mb-1" style={{ color: "#7c3aed" }}>
               KNOWLEDGE &amp; KARMA
             </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Why Free?</h2>
-            <p className="text-gray-300 text-sm leading-relaxed mb-2">
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-[#0D1F3C]">Why Free?</h2>
+            <p className="text-gray-700 text-sm leading-relaxed mb-2">
               Because Pavan has seen what happens when the right person gets the right knowledge at the right time.
             </p>
-            <p className="text-gray-300 text-sm mb-1">These courses were paid.</p>
-            <p className="text-gray-300 text-sm mb-1">And now they are free.</p>
-            <p className="text-gray-300 text-sm mb-6">That is the whole story.</p>
+            <p className="text-gray-700 text-sm mb-1">These courses were paid.</p>
+            <p className="text-gray-700 text-sm mb-1">And now they are free.</p>
+            <p className="text-gray-700 text-sm mb-6">That is the whole story.</p>
             <a
               href="https://wa.me/919552782037"
               target="_blank"
@@ -616,16 +615,16 @@ const About = () => {
           {/* quote */}
           <div
             className="flex-shrink-0 lg:w-72 rounded-xl p-6 relative"
-            style={{ backgroundColor: "#1a1060" }}
+            style={{ backgroundColor: "#f3e8ff", border: "1px solid rgba(124, 58, 237, 0.15)" }}
           >
             <span className="text-5xl font-serif leading-none" style={{ color: "#7c3aed", lineHeight: 1 }}>
               ❝
             </span>
-            <p className="text-white text-base sm:text-lg font-semibold italic leading-relaxed mt-2 mb-4">
+            <p className="text-[#0D1F3C] text-base sm:text-lg font-semibold italic leading-relaxed mt-2 mb-4">
               The greatest investment is not in a stock, a business, or a degree.
               It is in understanding your own mind.
             </p>
-            <p className="text-sm font-semibold" style={{ color: "#c084fc" }}>
+            <p className="text-sm font-semibold" style={{ color: "#7c3aed" }}>
               — Pavan Bhattad
             </p>
             <span
@@ -659,15 +658,15 @@ const About = () => {
 
       {/* ══ BOTTOM CTA BANNER ══ */}
       <section
-        className="w-full py-5 px-6"
-        style={{ backgroundColor: "#0D1F3C" }}
+        className="w-full py-8 px-6 bg-white"
+        style={{ borderTop: "1px solid rgba(13,31,60,0.08)" }}
       >
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
           <div>
-            <h3 className="text-white text-xl font-heading font-extrabold mb-1">
+            <h3 className="text-[#0D1F3C] text-xl font-heading font-extrabold mb-1">
               Ready to Unlock Your Potential?
             </h3>
-            <p className="text-white/50 text-sm">
+            <p className="text-gray-500 text-sm">
               Join thousands of learners discovering how their minds really work.
             </p>
           </div>

@@ -121,9 +121,8 @@ const Home = () => {
 
       {/* ══ HERO ══ */}
       <section
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden bg-white"
         style={{
-          background: "linear-gradient(135deg, #0D1F3C 0%, rgba(13,31,60,0.95) 100%)",
           minHeight: "500px",
         }}
       >
@@ -131,15 +130,15 @@ const Home = () => {
         <div
           className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 opacity-10 pointer-events-none"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #000 1px, transparent 1px)",
             backgroundSize: "18px 18px",
           }}
         />
         {/* Curve accent */}
         <div
-          className="absolute bottom-0 left-0 w-56 h-56 sm:w-72 sm:h-72 rounded-full opacity-10 pointer-events-none"
+          className="absolute bottom-0 left-0 w-56 h-56 sm:w-72 sm:h-72 rounded-full opacity-5 pointer-events-none"
           style={{
-            background: "radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 70%)",
+            background: "radial-gradient(circle at center, rgba(13,31,60,0.1) 0%, transparent 70%)",
             transform: "translate(-30%, 40%)",
           }}
         />
@@ -147,17 +146,17 @@ const Home = () => {
         <div className="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10 py-12 md:min-h-[500px]">
 
           {/* Hero text */}
-          <div className="order-2 md:order-2 flex-1 text-white text-center md:text-left">
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-2">
+          <div className="order-2 md:order-2 flex-1 text-[#0D1F3C] text-center md:text-left">
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-2 text-[#0D1F3C]">
               Learn , Grow , Evolve & Liberate.
             </h1>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight mb-6 text-white/90">
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight mb-6 text-[#0D1F3C]">
               Your Learning Mentor{" "}
-              <span className="font-heading font-black italic text-white bg-white/10 px-3 py-1 rounded-xl ml-1 inline-block border border-white/10">
+              <span className="font-heading font-black italic text-[#0D1F3C] bg-black/5 px-3 py-1 rounded-xl ml-1 inline-block border border-black/10">
                 — Pavan Bhattad
               </span>
             </h2>
-            <p className="text-white/70 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-xl">
+            <p className="text-gray-700 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-xl">
               Knowledge and Karma is a Learning Philanthropy project — where genuine education meets generous access.
               Premium courses conducted before Covid are now available as free live sessions for everyone who wants to grow.
               <br className="hidden sm:block" />
@@ -199,8 +198,8 @@ const Home = () => {
 
         {/* ── Pillars bar ── */}
         <div
-          className="relative w-full"
-          style={{ backgroundColor: "rgba(13,31,60,0.97)", borderTop: "1px solid rgba(255,255,255,0.06)" }}
+          className="relative w-full bg-white"
+          style={{ borderTop: "1px solid rgba(13,31,60,0.08)", borderBottom: "1px solid rgba(13,31,60,0.08)" }}
         >
           <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
             {pillars.map(({ icon, title, sub, colorStyle }) => (
@@ -216,8 +215,8 @@ const Home = () => {
                 >
                   {icon}
                 </div>
-                <p className="text-white font-heading font-bold text-sm sm:text-base mt-2">{title}</p>
-                <p className="text-white/50 text-xs sm:text-sm leading-snug">{sub}</p>
+                <p className="text-[#0D1F3C] font-heading font-bold text-sm sm:text-base mt-2">{title}</p>
+                <p className="text-gray-500 text-xs sm:text-sm leading-snug">{sub}</p>
               </div>
             ))}
           </div>
