@@ -456,13 +456,7 @@ const About = () => {
                 He has spent 20 years teaching people how their own minds work.
                 Most say they wish they had learned this sooner.
               </p>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors hover:bg-black/5"
-                style={{ borderColor: "#0D1F3C", color: "#0D1F3C" }}
-              >
-                His Story <ChevronRight size={15} />
-              </Link>
+             
             </div>
           </div>
         </div>
