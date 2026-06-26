@@ -287,7 +287,7 @@ export default function Courses() {
           <div className="flex items-center justify-center gap-6 sm:gap-10 mt-8 flex-wrap">
             {[
               { value: "4", label: "Courses" },
-              { value: "5000+", label: "Students" },
+              { value: "5K+", label: "Students" },
               { value: "100%", label: "Free Live Sessions" },
               { value: "4.9★", label: "Avg. Rating" },
             ].map((stat) => (

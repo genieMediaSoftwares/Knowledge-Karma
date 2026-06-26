@@ -44,7 +44,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#0D1F3C" }} className="text-white w-full">
+    <footer style={{ backgroundColor: "#001334" }} className="text-white w-full">
       {/* Main Footer Grid */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 text-left">
@@ -53,10 +53,10 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <Link to="/" className="no-underline flex-shrink-0 flex items-center select-none w-fit">
               <img
-                src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/33830/library/6a27bc31130b3_1780988977_knklogoonwhite-large-3100-1.png"
-                alt="Knowledge & Karma"
-                className="h-10 sm:h-12 w-auto object-contain bg-white rounded-lg p-2"
-              />
+  src="https://s3.amazonaws.com/contents.newzenler.com/71058/library/6a3e4c82ccd12_1782467714_0d59a8dc-4546-4734-9de8-02ea8e573202.png"
+  alt="Knowledge & Karma"
+  className="h-24 w-auto object-contain"
+/>
             </Link>
             <p className="text-sm text-white/70 mt-1 leading-relaxed">
               Learn, Grow, Evolve, Liberate.

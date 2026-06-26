@@ -231,7 +231,7 @@ const Contact = () => {
               <em className="not-italic text-[#0D1F3C]/80">what's possible</em>
             </h1>
             <p className="text-base text-gray-600 leading-relaxed max-w-sm mb-8 font-sans">
-              For courses, corporate training, collaborations, or speaking events — we're here and happy to connect.
+              For courses, corporate training, collaborations, or speaking events - we're here and happy to connect.
             </p>
 
             {/* Quick pills */}

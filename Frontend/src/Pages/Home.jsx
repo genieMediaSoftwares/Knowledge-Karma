@@ -153,14 +153,14 @@ const Home = () => {
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight mb-6 text-[#0D1F3C]">
               Your Learning Mentor{" "}
               <span className="font-heading font-black italic text-[#0D1F3C] bg-black/5 px-3 py-1 rounded-xl ml-1 inline-block border border-black/10">
-                — Pavan Bhattad
+                - Pavan Bhattad
               </span>
             </h2>
             <p className="text-gray-700 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-xl">
-              Knowledge and Karma is a Learning Philanthropy project — where genuine education meets generous access.
+              Knowledge and Karma is a Learning Philanthropy project - where genuine education meets generous access.
               Premium courses conducted before Covid are now available as free live sessions for everyone who wants to grow.
               <br className="hidden sm:block" />
-              We aren't here to teach — we're here to help you transform. Come, let's do this together.
+              We aren't here to teach - we're here to help you transform. Come, let's do this together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
