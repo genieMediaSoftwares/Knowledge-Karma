@@ -19,21 +19,21 @@ import {
 const secrets = [
   {
     id: 1,
-    icon: <BookOpen size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
+    icon: <BookOpen size={26} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />,
     label: "SECRET #1",
     title: "How to complete the book you started, in one sitting",
     desc: "You have a plan full of half-read books. You are not lazy. You just learned to read slowly. This secret flow is what turns the inside out.",
   },
   {
     id: 2,
-    icon: <Star size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
+    icon: <Star size={26} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />,
     label: "SECRET #2",
     title: "Read faster with better understanding and recall",
     desc: "The faster you read the right way, the better you understand. Learn the method that doubles your reading speed while your memory of it actually improves.",
   },
   {
     id: 3,
-    icon: <UserCheck size={26} strokeWidth={1.5} style={{ color: "#60A5FA" }} />,
+    icon: <UserCheck size={26} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />,
     label: "SECRET #3",
     title: "How to use your reading and put it to implementation",
     desc: "Information seen in your head is just weight. You will leave with a system to take what you read and put it to real use in your work and life.",
@@ -49,11 +49,11 @@ const learnings = [
 ];
 
 const audience = [
-  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Students" },
-  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Professionals" },
-  { icon: <Lightbulb size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Entrepreneurs" },
-  { icon: <BookMarked size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Lifelong Learners" },
-  { icon: <BookOpen size={20} strokeWidth={1.5} style={{ color: "#60A5FA" }} />, label: "Anyone who wants to read more and grow faster" },
+  { icon: <GraduationCap size={20} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />, label: "Students" },
+  { icon: <Users size={20} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />, label: "Professionals" },
+  { icon: <Lightbulb size={20} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />, label: "Entrepreneurs" },
+  { icon: <BookMarked size={20} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />, label: "Lifelong Learners" },
+  { icon: <BookOpen size={20} strokeWidth={1.5} style={{ color: "#1D4BC9" }} />, label: "Anyone who wants to read more and grow faster" },
 ];
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -61,10 +61,10 @@ const audience = [
 function FeatureBadge({ icon, label, value }) {
   return (
     <div className="flex items-center gap-3">
-      <div style={{ color: "#60A5FA" }}>{icon}</div>
+      <div style={{ color: "#1D4BC9" }}>{icon}</div>
       <div>
-        <p className="text-xs leading-none mb-0.5" style={{ color: "#94a3b8" }}>{label}</p>
-        <p className="text-sm font-bold leading-none" style={{ color: "#fff" }}>{value}</p>
+        <p className="text-xs leading-none mb-0.5" style={{ color: "#64748b" }}>{label}</p>
+        <p className="text-sm font-bold leading-none" style={{ color: "#0D1F3C" }}>{value}</p>
       </div>
     </div>
   );
@@ -79,20 +79,20 @@ function SecretCard({ secret }) {
         style={{
           width: 52,
           height: 52,
-          background: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)",
-          border: "1.5px solid #2563eb55",
+          background: "rgba(29, 75, 201, 0.08)",
+          border: "1.5px solid rgba(29, 75, 201, 0.2)",
         }}
       >
         {secret.icon}
       </div>
       <div>
-        <p className="text-xs font-semibold mb-1" style={{ color: "#94a3b8", letterSpacing: "0.05em" }}>
+        <p className="text-xs font-semibold mb-1" style={{ color: "#64748b", letterSpacing: "0.05em" }}>
           {secret.label}
         </p>
-        <p className="font-bold text-sm leading-snug mb-1.5" style={{ color: "#fff" }}>
+        <p className="font-bold text-sm leading-snug mb-1.5" style={{ color: "#0D1F3C" }}>
           {secret.title}
         </p>
-        <p className="text-xs leading-relaxed" style={{ color: "#94a3b8" }}>
+        <p className="text-xs leading-relaxed" style={{ color: "#475569" }}>
           {secret.desc}
         </p>
       </div>
@@ -105,9 +105,8 @@ function SecretCard({ secret }) {
 export default function Hundredbooks() {
   return (
     <div
-      className="min-h-screen w-full"
+      className="min-h-screen w-full bg-white"
       style={{
-        background: "radial-gradient(ellipse at top, #0d1b3e 0%, #06091a 60%, #030610 100%)",
         fontFamily: "'Segoe UI', system-ui, sans-serif",
       }}
     >
@@ -115,7 +114,7 @@ export default function Hundredbooks() {
       <div
         className="fixed inset-0 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(13,31,60,0.03) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
           zIndex: 0,
         }}
@@ -125,11 +124,11 @@ export default function Hundredbooks() {
 
         {/* ── Breadcrumb ── */}
         <nav className="flex items-center gap-2 text-sm mb-6" aria-label="Breadcrumb">
-          <a href="/courses" style={{ color: "#60A5FA", textDecoration: "none", fontWeight: 500 }}>
+          <a href="/courses" style={{ color: "#1D4BC9", textDecoration: "none", fontWeight: 500 }}>
             Courses
           </a>
           <ChevronRight size={14} style={{ color: "#64748b" }} />
-          <span style={{ color: "#cbd5e1" }}>How to Read 100 Books in a Year</span>
+          <span style={{ color: "#475569" }}>How to Read 100 Books in a Year</span>
         </nav>
 
         {/* ── Two-column layout ── */}
@@ -142,32 +141,31 @@ export default function Hundredbooks() {
             <div
               className="rounded-2xl p-6 relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
-                border: "1.5px solid #1e3a6e",
+                background: "#ffffff",
+                border: "1.5px solid #1D4BC9",
+                boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
               }}
             >
               {/* Number badge */}
               <div
                 className="absolute top-4 left-4 w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm"
-                style={{ background: "#2563EB" }}
+                style={{ background: "#1D4BC9" }}
               >
                 1
               </div>
 
               {/* Image + Title row */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-end gap-5 mt-2">
+              <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 mt-2">
                 {/* Course image */}
                 <div className="flex-shrink-0">
                   <img
-                    src="https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764265/bd73ab8f-c519-49b1-bc9d-2cad86170a99_tsxjpv.jpg"
-                    alt="Stack of glowing books"
+                    src="https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png"
+                    alt="How to Read 100 Books in a Year"
                     className="rounded-xl object-contain"
                     style={{
                       width: 180,
                       height: 200,
-                      background: "#0a1628",
-                      /* Remove below border once real image is added */
-                      border: "1px dashed #2563eb44",
+                      background: "transparent",
                     }}
                     onError={(e) => {
                       e.target.style.display = "none";
@@ -181,9 +179,9 @@ export default function Hundredbooks() {
                       width: 180,
                       height: 200,
                       display: "none",
-                      background: "linear-gradient(135deg, #1e3a8a22, #1e40af44)",
-                      border: "1px dashed #2563eb88",
-                      color: "#60A5FA",
+                      background: "rgba(29, 75, 201, 0.05)",
+                      border: "1px dashed rgba(29, 75, 201, 0.2)",
+                      color: "#1D4BC9",
                       fontSize: 64,
                     }}
                   >
@@ -194,14 +192,14 @@ export default function Hundredbooks() {
                 {/* Title block */}
                 <div>
                   <h1
-                    className="font-extrabold leading-tight"
-                    style={{ color: "#ffffff", fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}
+                    className="font-extrabold leading-tight text-[#0D1F3C]"
+                    style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}
                   >
                     How to Read{" "}<br />
-                    <span style={{ color: "#F5A623" }}>100 Books</span>
+                    <span style={{ color: "#1D4BC9" }}>100 Books</span>
                     <br />in a Year
                   </h1>
-                  <p className="mt-3 text-sm leading-relaxed" style={{ color: "#cbd5e1", maxWidth: 320 }}>
+                  <p className="mt-3 text-sm leading-relaxed text-[#475569]" style={{ maxWidth: 320 }}>
                     Learn Speed Reading, Memory Techniques, Mind Maps and Creative Thinking.
                   </p>
                 </div>
@@ -212,8 +210,9 @@ export default function Hundredbooks() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
-                border: "1.5px solid #1e3a6e",
+                background: "#ffffff",
+                border: "1.5px solid rgba(13,31,60,0.08)",
+                boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
               }}
             >
               <div className="flex flex-row flex-wrap gap-x-8 gap-y-4">
@@ -239,13 +238,13 @@ export default function Hundredbooks() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
-                border: "1.5px solid #1e3a6e",
+                background: "#ffffff",
+                border: "1.5px solid rgba(13,31,60,0.08)",
+                boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
               }}
             >
               <h2
-                className="font-bold text-lg mb-4"
-                style={{ color: "#60A5FA" }}
+                className="font-bold text-lg mb-4 text-[#1D4BC9]"
               >
                 What You Will Learn
               </h2>
@@ -256,9 +255,9 @@ export default function Hundredbooks() {
                       size={20}
                       strokeWidth={1.8}
                       className="flex-shrink-0 mt-0.5"
-                      style={{ color: "#60A5FA" }}
+                      style={{ color: "#1D4BC9" }}
                     />
-                    <span className="text-sm leading-relaxed" style={{ color: "#cbd5e1" }}>
+                    <span className="text-sm leading-relaxed text-[#475569]">
                       {item}
                     </span>
                   </li>
@@ -274,18 +273,18 @@ export default function Hundredbooks() {
             <div
               className="rounded-2xl px-6 py-5 flex-1"
               style={{
-                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
-                border: "1.5px solid #1e3a6e",
+                background: "#ffffff",
+                border: "1.5px solid rgba(13,31,60,0.08)",
+                boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
               }}
             >
               <h2
-                className="font-bold text-lg mb-1"
-                style={{ color: "#60A5FA" }}
+                className="font-bold text-lg mb-1 text-[#1D4BC9]"
               >
                 About This Course
               </h2>
-              <p className="text-sm mb-5 italic" style={{ color: "#F5A623" }}>
-                In this free training, I'll reveal...
+              <p className="text-sm mb-5 italic text-[#1D4BC9] font-medium">
+                In this free training, Pavan will reveal...
               </p>
 
               <div className="flex flex-col gap-6">
@@ -295,7 +294,7 @@ export default function Hundredbooks() {
                     {i < secrets.length - 1 && (
                       <div
                         className="mt-5"
-                        style={{ borderTop: "1px solid #1e3a6e" }}
+                        style={{ borderTop: "1px solid rgba(13, 31, 60, 0.08)" }}
                       />
                     )}
                   </div>
@@ -307,13 +306,13 @@ export default function Hundredbooks() {
             <div
               className="rounded-2xl px-6 py-5"
               style={{
-                background: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
-                border: "1.5px solid #1e3a6e",
+                background: "#ffffff",
+                border: "1.5px solid rgba(13,31,60,0.08)",
+                boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
               }}
             >
               <h2
-                className="font-bold text-lg mb-4"
-                style={{ color: "#60A5FA" }}
+                className="font-bold text-lg mb-4 text-[#1D4BC9]"
               >
                 Who Should Join?
               </h2>
@@ -321,7 +320,7 @@ export default function Hundredbooks() {
                 {audience.map((a, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <span className="flex-shrink-0">{a.icon}</span>
-                    <span className="text-sm" style={{ color: "#cbd5e1" }}>{a.label}</span>
+                    <span className="text-sm text-[#475569]">{a.label}</span>
                   </li>
                 ))}
               </ul>
@@ -336,9 +335,9 @@ export default function Hundredbooks() {
             href="#"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
-              background: "linear-gradient(90deg, #2563EB, #1d4ed8)",
+              background: "linear-gradient(90deg, #1D4BC9, #163cb1)",
               textDecoration: "none",
-              boxShadow: "0 4px 20px rgba(37,99,235,0.35)",
+              boxShadow: "0 4px 20px rgba(29,75,201,0.2)",
             }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
@@ -354,7 +353,7 @@ export default function Hundredbooks() {
             style={{
               background: "linear-gradient(90deg, #16A34A, #15803d)",
               textDecoration: "none",
-              boxShadow: "0 4px 20px rgba(22,163,74,0.35)",
+              boxShadow: "0 4px 20px rgba(22,163,74,0.15)",
             }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}

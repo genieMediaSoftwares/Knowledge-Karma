@@ -313,63 +313,62 @@ const About = () => {
                 num: 1,
                 route: "/courses/how-to-read-100-books",
                 image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png",
-                title: <>How to Read <span className="text-[#F59E0B] font-extrabold">100 Books</span> in a Year</>,
+                title: <>How to Read <span className="text-[#1D4BC9] font-extrabold">100 Books</span> in a Year</>,
                 titlePlain: "How to Read 100 Books in a Year",
                 desc: "Learn Speed Reading, Memory Techniques, Mind Maps and Creative Thinking.",
                 color: "#1D4BC9",
                 hoverColor: "#163cb1",
-                shadow: "rgba(29,75,201,0.25)",
-                bgGradient: "linear-gradient(135deg, #0D1F3C 0%, #050E1A 100%)",
+                shadow: "rgba(29,75,201,0.12)",
+                bgGradient: "#ffffff",
                 borderColor: "#1D4BC9",
               },
               {
                 num: 2,
                 route: "/courses/nlp-mastery",
                 image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27b9ea2becc_1780988394_pavanbhattadcards-5.png",
-                title: <span className="text-[#A78BFA] font-bold">NLP Mastery</span>,
+                title: <span className="text-[#7C3AED] font-bold">NLP Mastery</span>,
                 titlePlain: "NLP Mastery",
                 desc: "Master the art of communication, influence and personal transformation with NLP.",
                 color: "#7C3AED",
                 hoverColor: "#6d28d9",
-                shadow: "rgba(124,58,237,0.25)",
-                bgGradient: "linear-gradient(135deg, #2E1065 0%, #12042C 100%)",
+                shadow: "rgba(124,58,237,0.12)",
+                bgGradient: "#ffffff",
                 borderColor: "#7C3AED",
               },
               {
                 num: 3,
                 route: "/courses/my-25th-hour",
                 image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bab564737_1780988597_pavanbhattadcards-4.png",
-                title: <span className="text-[#34D399] font-bold">My 25th Hour</span>,
+                title: <span className="text-[#059669] font-bold">My 25th Hour</span>,
                 titlePlain: "My 25th Hour",
                 desc: "Learn the Art of Creating Time.",
                 color: "#059669",
                 hoverColor: "#047857",
-                shadow: "rgba(5,150,105,0.25)",
-                bgGradient: "linear-gradient(135deg, #064E3B 0%, #011E16 100%)",
+                shadow: "rgba(5,150,105,0.12)",
+                bgGradient: "#ffffff",
                 borderColor: "#059669",
               },
               {
                 num: 4,
                 route: "/courses/brain-ki-baat",
                 image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a23a5730236d_1780721011_l-3.png",
-                title: <span className="text-[#FBBF24] font-bold">Brain Ki Baat</span>,
+                title: <span className="text-[#B45309] font-bold">Brain Ki Baat</span>,
                 titlePlain: "Brain Ki Baat",
                 desc: "Understand how your brain works and reprogram it for success and growth.",
                 color: "#B45309",
                 hoverColor: "#92400E",
-                shadow: "rgba(180,83,9,0.25)",
-                bgGradient: "linear-gradient(135deg, #451A03 0%, #1E0A00 100%)",
+                shadow: "rgba(180,83,9,0.12)",
+                bgGradient: "#ffffff",
                 borderColor: "#B45309",
               },
             ].map((c) => (
               <div
                 key={c.num}
                 onClick={() => navigate(c.route)}
-                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-2 h-full border"
+                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-2 h-full border bg-white"
                 style={{
-                  background: c.bgGradient,
                   borderColor: c.borderColor,
-                  boxShadow: `0 10px 30px ${c.shadow}`,
+                  boxShadow: `0 10px 30px rgba(13,31,60,0.06)`,
                 }}
               >
                 {/* Number badge */}
@@ -399,12 +398,12 @@ const About = () => {
                 </div>
 
                 {/* Title */}
-                <div className="px-4 pt-3 text-center text-base font-heading font-bold text-white leading-snug mb-2">
+                <div className="px-4 pt-3 text-center text-base font-heading font-bold text-[#0D1F3C] leading-snug mb-2">
                   {c.title}
                 </div>
 
                 {/* Desc */}
-                <p className="px-4 text-center text-white/60 text-xs leading-relaxed flex-1 font-sans">
+                <p className="px-4 text-center text-gray-600 text-xs leading-relaxed flex-1 font-sans">
                   {c.desc}
                 </p>
 
@@ -416,7 +415,7 @@ const About = () => {
                     className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-white text-sm font-heading font-semibold transition-all duration-200 border-none cursor-pointer"
                     style={{
                       backgroundColor: c.color,
-                      boxShadow: `0 4px 12px ${c.shadow}`,
+                      boxShadow: `0 4px 12px rgba(13,31,60,0.12)`,
                     }}
                     onMouseEnter={(e) => { e.target.style.backgroundColor = c.hoverColor; }}
                     onMouseLeave={(e) => { e.target.style.backgroundColor = c.color; }}
