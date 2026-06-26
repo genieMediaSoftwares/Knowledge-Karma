@@ -17,7 +17,7 @@ const courses = [
     plainTitle: "How to Read 100 Books in a Year",
     description:
       "Learn Speed Reading, Memory Techniques, Mind Maps and Creative Thinking.",
-   
+
     duration: "6 Weeks",
     level: "Beginner",
     image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764265/bd73ab8f-c519-49b1-bc9d-2cad86170a99_tsxjpv.jpg",
@@ -29,7 +29,7 @@ const courses = [
     btnBg: "linear-gradient(90deg, #2563EB, #1d4ed8)",
     enrollUrl: "/courses/how-to-read-100-books",
   },
-   {
+  {
     id: 2,
     number: 2,
     path: "/courses/brain-ki-baat",
@@ -38,13 +38,13 @@ const courses = [
     ),
     plainTitle: "Brain Ki Baat",
     description:
-      "Understand how your brain works and reprogram it for success and happiness.",
-   
+      "Understand how your brain works and reprogram it for success and growth.",
+
     duration: "5 Weeks",
     level: "All Levels",
     image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764273/a7d241a8-3a72-4341-a297-8b380ee84f5e_avvjom.jpg",
     numberBg: "#7C3AED",
- cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+    cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
     borderColor: "#3b1a6e",
     tagColor: "#A855F7",
     tagBg: "#3b1a6e44",
@@ -56,38 +56,38 @@ const courses = [
     number: 3,
     path: "/courses/my-25th-hour",
     title: (
-     <span style={{ color: "#A855F7" }}>My 25th Hour</span>
+      <span style={{ color: "#A855F7" }}>My 25th Hour</span>
     ),
     plainTitle: "My 25th Hour",
     description: "Learn the Art of Creating Time.",
-  
+
     duration: "4 Weeks",
     level: "All Levels",
     image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764334/b0f0a21c-3c74-44b5-b76e-4759d3ff92fb_c0y8rc.jpg",
-   numberBg: "#7C3AED",
- cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
+    numberBg: "#7C3AED",
+    cardBg: "linear-gradient(135deg, #130a2a 0%, #0d0618 100%)",
     borderColor: "#3b1a6e",
     tagColor: "#A855F7",
     tagBg: "#3b1a6e44",
     btnBg: "linear-gradient(90deg, #7C3AED, #6d28d9)",
     enrollUrl: "/courses/my-25th-hour",
-  },{
+  }, {
     id: 4,
     number: 4,
     path: "/courses/nlp-mastery",
     title: (
       <>
-      <span style={{ color: "#F5A623" }}>NLP</span> Mastery
+        <span style={{ color: "#F5A623" }}>NLP</span> Mastery
       </>
     ),
     plainTitle: "NLP Mastery",
     description:
       "Master the art of communication, influence and personal transformation with NLP.",
-   
+
     duration: "8 Weeks",
     level: "Intermediate",
     image: "https://res.cloudinary.com/dbazx1qbu/image/upload/v1781764321/c91421f9-9b93-44ba-92b2-7717821224e8_outh5b.jpg",
-     numberBg: "#2563EB",
+    numberBg: "#2563EB",
     cardBg: "linear-gradient(135deg, #0f1e3d 0%, #0a1628 100%)",
     borderColor: "#1e3a6e",
     tagColor: "#2563EB",
@@ -95,7 +95,7 @@ const courses = [
     btnBg: "linear-gradient(90deg, #2563EB, #1d4ed8)",
     enrollUrl: "/courses/nlp-mastery",
   }
- 
+
 ];
 
 // ── Course Image ─────────────────────────────────────────────────────────────
@@ -123,7 +123,7 @@ function CourseImage({ image, alt, borderColor }) {
 function FeatureBadge({ label, value }) {
   return (
     <div className="flex items-center gap-2">
-    
+
       <div>
         <p className="text-xs leading-none mb-0.5" style={{ color: "#94a3b8" }}>
           {label}
@@ -179,7 +179,7 @@ function CourseCard({ course }) {
         {course.number}
       </div>
 
-     
+
 
       {/* Top: Image + Title + Description */}
       <div className="flex flex-col gap-4">
@@ -212,7 +212,7 @@ function CourseCard({ course }) {
       {/* Divider */}
       <div style={{ borderTop: `1px solid ${course.borderColor}` }} />
 
-     
+
       {/* Enroll Button */}
       <button
         onClick={(e) => {

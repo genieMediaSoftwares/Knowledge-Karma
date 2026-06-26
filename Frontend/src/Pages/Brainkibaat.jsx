@@ -96,7 +96,7 @@ function TrainingCard({ point, showDivider }) {
         </div>
       </div>
       {showDivider && (
-        <div className="mt-5" style={{borderTop: "1px solid #3b1a6e"  }} />
+        <div className="mt-5" style={{ borderTop: "1px solid #3b1a6e" }} />
       )}
     </div>
   );
@@ -326,7 +326,7 @@ export default function Brainkibaat() {
 
           {/* WhatsApp — green */}
           <a
-           href="https://wa.me/919552782037"
+            href="https://wa.me/919552782037"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
               background: "linear-gradient(90deg, #16A34A, #15803d)",

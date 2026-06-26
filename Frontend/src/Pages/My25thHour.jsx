@@ -165,7 +165,7 @@ export default function My25thHour() {
                     style={{
                       width: 180,
                       height: 210,
-                     background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
+                      background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
                       border: "1px dashed #7c3aed88",
                       color: "#C084FC",
                     }}
@@ -193,9 +193,9 @@ export default function My25thHour() {
                       className="absolute inset-0 rounded-xl flex flex-col items-center justify-center gap-1"
                       style={{
                         display: "none",
-                         background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
-                      border: "1px dashed #7c3aed88",
-                      color: "#C084FC",
+                        background: "linear-gradient(135deg, #3b076444, #4c1d9544)",
+                        border: "1px dashed #7c3aed88",
+                        color: "#C084FC",
                       }}
                     >
                       <img
@@ -226,7 +226,7 @@ export default function My25thHour() {
                   <h1
                     className="font-extrabold leading-tight"
                     style={{
-                       color: "#C084FC",
+                      color: "#C084FC",
                       fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
                       textShadow: "0 0 30px rgba(192,132,252,0.4)",
                     }}

@@ -197,7 +197,7 @@ export default function Hundredbooks() {
                     className="font-extrabold leading-tight"
                     style={{ color: "#ffffff", fontSize: "clamp(1.6rem, 4vw, 2.2rem)" }}
                   >
-                    How to Read{" "}<br/>
+                    How to Read{" "}<br />
                     <span style={{ color: "#F5A623" }}>100 Books</span>
                     <br />in a Year
                   </h1>
@@ -349,7 +349,7 @@ export default function Hundredbooks() {
 
           {/* WhatsApp */}
           <a
-           href="https://wa.me/919552782037"
+            href="https://wa.me/919552782037"
             className="flex items-center justify-center gap-3 rounded-xl py-4 font-bold text-white text-base transition-all duration-200"
             style={{
               background: "linear-gradient(90deg, #16A34A, #15803d)",

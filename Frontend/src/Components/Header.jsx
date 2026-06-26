@@ -3,21 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 
 const Logo = () => (
-  <Link to="/" className="no-underline flex-shrink-0">
-    <div className="flex flex-col leading-tight">
-      <span
-        className="font-extrabold italic tracking-wide text-lg"
-        style={{ color: "#1a3aad", fontFamily: "Georgia, serif" }}
-      >
-        KNOWLEDGE
-      </span>
-      <span
-        className="font-extrabold italic tracking-wide text-lg text-center"
-        style={{ color: "#c0176e", fontFamily: "Georgia, serif" }}
-      >
-        & KARMA
-      </span>
-    </div>
+  <Link to="/" className="no-underline flex-shrink-0 flex items-center select-none">
+    <img
+      src="https://s3.us-east-1.amazonaws.com/contents.newzenler.com/33830/library/6a27bc31130b3_1780988977_knklogoonwhite-large-3100-1.png"
+      alt="Knowledge & Karma"
+      className="h-10 sm:h-12 w-auto object-contain"
+    />
   </Link>
 );
 
@@ -32,23 +23,22 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const desktopLinkClass = ({ isActive }) =>
-    isActive
-      ? "text-sm font-semibold whitespace-nowrap pb-1 border-b-2 transition-colors duration-200"
-      : "text-sm font-medium text-gray-700 whitespace-nowrap pb-1 border-b-2 border-transparent hover:text-blue-700 transition-colors duration-200";
-
-  const desktopLinkStyle = ({ isActive }) =>
-    isActive ? { color: "#1a3aad", borderColor: "#1a3aad" } : {};
+    `font-heading text-sm font-semibold whitespace-nowrap pb-1 border-b-2 transition-all duration-200 ${
+      isActive
+        ? "text-accent border-accent"
+        : "text-black border-transparent hover:text-accent"
+    }`;
 
   const mobileLinkClass = ({ isActive }) =>
-    isActive
-      ? "block py-2.5 text-sm font-semibold border-b border-gray-100"
-      : "block py-2.5 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-blue-700 transition-colors duration-200";
-
-  const mobileLinkStyle = ({ isActive }) =>
-    isActive ? { color: "#1a3aad" } : {};
+    `block py-2.5 font-heading text-base font-medium transition-all duration-200 ${
+      isActive ? "text-accent" : "text-black hover:text-accent"
+    }`;
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 w-full">
+    <header
+      className="bg-white sticky top-0 z-50 w-full"
+      style={{ borderBottom: "1px solid rgba(13,31,60,0.06)", boxShadow: "0 2px 10px rgba(13,31,60,0.02)" }}
+    >
       {/* Desktop / Tablet Bar */}
       <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
         {/* Logo */}
@@ -62,7 +52,6 @@ const Header = () => {
               to={to}
               end={to === "/"}
               className={desktopLinkClass}
-              style={desktopLinkStyle}
             >
               {label}
             </NavLink>
@@ -74,8 +63,7 @@ const Header = () => {
           href="https://wa.me/919552782037"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 text-white text-sm font-semibold px-4 py-2.5 rounded-md flex-shrink-0 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90"
-          style={{ backgroundColor: "#15803D" }}
+          className="hidden md:flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-md flex-shrink-0 transition-all duration-200 hover:-translate-y-0.5 bg-whatsapp hover:bg-[#1ebd5b] shadow-md hover:shadow-lg"
         >
           <FaWhatsapp size={18} />
           Join WhatsApp Group
@@ -83,8 +71,8 @@ const Header = () => {
 
         {/* Hamburger — Mobile only */}
         <button
-          className="md:hidden p-1 bg-transparent border-none cursor-pointer"
-          style={{ color: "#1a3aad" }}
+          className="md:hidden p-1 bg-transparent border-none cursor-pointer focus:outline-none active:outline-none"
+          style={{ color: "#0D1F3C" }}
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle menu"
         >
@@ -94,14 +82,15 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-md px-6 pt-4 pb-5 flex flex-col gap-0">
+        <div
+          className="md:hidden bg-white shadow-lg px-6 pt-2 pb-6 flex flex-col gap-1 border-t border-black/5"
+        >
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               end={to === "/"}
               className={mobileLinkClass}
-              style={mobileLinkStyle}
               onClick={() => setMenuOpen(false)}
             >
               {label}
@@ -111,8 +100,7 @@ const Header = () => {
             href="https://wa.me/919552782037"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 flex items-center justify-center gap-2 text-white text-sm font-semibold px-4 py-3 rounded-md transition-opacity duration-200 hover:opacity-90"
-            style={{ backgroundColor: "#1a3aad" }}
+            className="mt-4 flex items-center justify-center gap-2 text-white text-sm font-semibold px-4 py-3 rounded-md transition-all duration-200 bg-whatsapp hover:bg-[#1ebd5b] shadow-md"
           >
             <FaWhatsapp size={18} />
             Join WhatsApp Group

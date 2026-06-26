@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#0D1040",
+        accent: "#1A1060",
+        white: "#FFFFFF",
+        black: "#000000",
+        whatsapp: "#25D366",
+      }
+    },
   },
   plugins: [],
 }

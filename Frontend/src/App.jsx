@@ -8,6 +8,8 @@ import Hundredbooks from "./Pages/Hundredbooks";
 import NLPMastery from "./Pages/NLPMastery";
 import My25thHour from "./Pages/My25thHour";
 import Brainkibaat from "./Pages/Brainkibaat";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsConditions from "./Pages/TermsConditions";
 
 // Shared Navbar (yours)
 import Header from './Components/Header'
@@ -32,6 +34,10 @@ export default function App() {
         <Route path="/courses/nlp-mastery"           element={<NLPMastery />} />
         <Route path="/courses/my-25th-hour"          element={<My25thHour />} />
         <Route path="/courses/brain-ki-baat"         element={<Brainkibaat />} />
+
+        {/* Legal Pages */}
+        <Route path="/privacy-policy"                element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions"          element={<TermsConditions />} />
 
         {/* Fallback — redirect unknown paths to courses */}
       </Routes>
