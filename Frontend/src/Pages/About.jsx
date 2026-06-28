@@ -364,63 +364,68 @@ const About = () => {
               <div
                 key={c.num}
                 onClick={() => navigate(c.route)}
-                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-2 h-full border bg-white"
+                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-accent/30 transition-all duration-300 hover:-translate-y-1.5 h-full border bg-white"
                 style={{
                   borderColor: c.borderColor,
-                  boxShadow: `0 10px 30px rgba(13,31,60,0.06)`,
+                  boxShadow: "0 10px 30px rgba(13, 31, 60, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(13, 31, 60, 0.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(13, 31, 60, 0.04)";
                 }}
               >
-                {/* Number badge */}
-                <span
-                  className="absolute top-3 left-3 w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold z-10"
-                  style={{ backgroundColor: c.borderColor }}
-                >
-                  {c.num}
-                </span>
-
-                {/* Image area */}
-                <div
-                  className="w-full flex items-start justify-center pt-8 px-4"
-                  style={{ minHeight: "160px", backgroundColor: "transparent" }}
-                >
+                {/* Top Image: Full-width aspect-video, no padding */}
+                <div className="w-full aspect-[16/9] overflow-hidden bg-slate-50 relative rounded-t-2xl">
                   <img
                     src={c.image}
                     alt={c.titlePlain}
-                    style={{
-                      width: "100%",
-                      height: "140px",
-                      objectFit: "contain",
-                      objectPosition: "top center",
-                      display: "block",
-                    }}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
 
-                {/* Title */}
-                <div className="px-4 pt-3 text-center text-base font-heading font-bold text-[#0D1F3C] leading-snug mb-2">
-                  {c.title}
-                </div>
+                {/* Content Section */}
+                <div className="p-4 sm:p-5 flex flex-col gap-3 flex-grow">
+                  <div className="flex flex-col gap-2">
+                    {/* Title */}
+                    <div className="text-left font-heading font-bold text-[#0D1F3C] leading-snug text-base">
+                      {c.title}
+                    </div>
 
-                {/* Desc */}
-                <p className="px-4 text-center text-gray-600 text-xs leading-relaxed flex-1 font-sans">
-                  {c.desc}
-                </p>
+                    {/* Desc */}
+                    <p className="text-left text-gray-600 text-xs sm:text-sm leading-relaxed flex-1 font-sans">
+                      {c.desc}
+                    </p>
+                  </div>
 
-                {/* Enroll button */}
-                <div className="px-4 pb-4 pt-3">
-                  <Link
-                    to={c.route}
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-white text-sm font-heading font-semibold transition-all duration-200 border-none cursor-pointer"
-                    style={{
-                      backgroundColor: c.color,
-                      boxShadow: `0 4px 12px rgba(13,31,60,0.12)`,
-                    }}
-                    onMouseEnter={(e) => { e.target.style.backgroundColor = c.hoverColor; }}
-                    onMouseLeave={(e) => { e.target.style.backgroundColor = c.color; }}
-                  >
-                    Enroll Now. Free <ChevronRight size={14} />
-                  </Link>
+                  {/* Bottom Section (Divider + Button) */}
+                  <div className="flex flex-col gap-3 mt-auto">
+                    {/* Divider */}
+                    <div style={{ borderTop: `1px solid rgba(13,31,60,0.06)` }} />
+
+                    {/* Enroll Button */}
+                    <Link
+                      to={c.route}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-white text-sm font-heading font-semibold transition-all duration-200 border-none cursor-pointer"
+                      style={{
+                        backgroundColor: c.color,
+                        boxShadow: `0 4px 12px rgba(13,31,60,0.1)`,
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.opacity = "0.9";
+                        e.currentTarget.style.transform = "translateY(-1px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.opacity = "1";
+                        e.currentTarget.style.transform = "translateY(0)";
+                      }}
+                    >
+                      Enroll Now. Free <ChevronRight size={16} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -456,7 +461,7 @@ const About = () => {
                 He has spent 20 years teaching people how their own minds work.
                 Most say they wish they had learned this sooner.
               </p>
-             
+
             </div>
           </div>
         </div>

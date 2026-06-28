@@ -5,6 +5,12 @@ import {
   Sparkles,
   Rocket,
   ChevronRight,
+  Video,
+  Play,
+  CheckCircle,
+  Lock,
+  Wifi,
+  Award,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -260,70 +266,217 @@ const Home = () => {
               <div
                 key={c.id}
                 onClick={() => navigate(c.route)}
-                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:-translate-y-2 h-full border bg-white"
+                className="relative flex flex-col rounded-2xl overflow-hidden cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-accent/30 transition-all duration-300 hover:-translate-y-1.5 h-full border bg-white"
                 style={{
                   borderColor: c.borderColor,
-                  boxShadow: `0 10px 30px rgba(13,31,60,0.06)`,
+                  boxShadow: "0 10px 30px rgba(13, 31, 60, 0.04)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(13, 31, 60, 0.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(13, 31, 60, 0.04)";
                 }}
               >
-                {/* Number badge */}
-                <span
-                  className="absolute top-3 left-3 w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold z-10"
-                  style={{ backgroundColor: c.borderColor }}
-                >
-                  {c.num}
-                </span>
-
-                {/* Image — contain, anchored top */}
-                <div
-                  className="w-full flex items-start justify-center pt-8 px-4"
-                  style={{ minHeight: "150px" }}
-                >
+                {/* Top Image: Full-width aspect-video, no padding */}
+                <div className="w-full aspect-[16/9] overflow-hidden bg-slate-50 relative rounded-t-2xl">
                   <img
                     src={c.image}
                     alt={c.titlePlain}
-                    style={{
-                      width: "100%",
-                      height: "clamp(110px, 20vw, 140px)",
-                      objectFit: "contain",
-                      objectPosition: "top center",
-                      display: "block",
-                    }}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
 
-                {/* Title */}
-                <div
-                  className="px-4 pt-3 text-center font-heading font-bold text-[#0D1F3C] leading-snug mb-2 flex-grow-0"
-                  style={{ fontSize: "clamp(14px, 2.5vw, 17px)" }}
-                >
-                  {c.title}
-                </div>
+                {/* Content Section */}
+                <div className="p-4 sm:p-5 flex flex-col gap-3 flex-grow">
+                  <div className="flex flex-col gap-2">
+                    {/* Title */}
+                    <div className="text-left font-heading font-bold text-[#0D1F3C] leading-snug text-base">
+                      {c.title}
+                    </div>
 
-                {/* Desc — hidden on very small screens */}
-                <p className="hidden sm:block px-4 text-center text-gray-600 text-xs leading-relaxed flex-1">
-                  {c.desc}
-                </p>
+                    {/* Desc — hidden on very small screens */}
+                    <p className="hidden sm:block text-left text-gray-600 text-xs sm:text-sm leading-relaxed flex-1 font-sans">
+                      {c.desc}
+                    </p>
+                  </div>
 
-                {/* Enroll button */}
-                <div className="px-4 pb-4 pt-3">
-                  <Link
-                    to={c.route}
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex items-center justify-center gap-1 sm:gap-1.5 w-full py-2.5 rounded-xl text-white font-heading font-semibold text-xs transition-all duration-200 border-none cursor-pointer"
-                    style={{
-                      backgroundColor: c.color,
-                      boxShadow: `0 4px 12px rgba(13,31,60,0.12)`,
-                    }}
-                    onMouseEnter={(e) => { e.target.style.backgroundColor = c.hoverColor; }}
-                    onMouseLeave={(e) => { e.target.style.backgroundColor = c.color; }}
-                  >
-                    Enroll Now. Free <ChevronRight size={14} />
-                  </Link>
+                  {/* Bottom Section (Divider + Button) */}
+                  <div className="flex flex-col gap-3 mt-auto">
+                    {/* Divider */}
+                    <div style={{ borderTop: `1px solid rgba(13,31,60,0.06)` }} />
+
+                    {/* Enroll Button */}
+                    <Link
+                      to={c.route}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-white text-sm font-heading font-semibold transition-all duration-200 border-none cursor-pointer"
+                      style={{
+                        backgroundColor: c.color,
+                        boxShadow: `0 4px 12px rgba(13,31,60,0.1)`,
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.opacity = "0.9";
+                        e.currentTarget.style.transform = "translateY(-1px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.opacity = "1";
+                        e.currentTarget.style.transform = "translateY(0)";
+                      }}
+                    >
+                      Enroll Now. Free <ChevronRight size={16} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══ LIVE vs RECORDED ══ */}
+      <section className="w-full py-16 px-6" style={{ background: "linear-gradient(135deg, #f8faff 0%, #fdf4ff 100%)", borderTop: "1px solid rgba(13,31,60,0.06)", borderBottom: "1px solid rgba(13,31,60,0.06)" }}>
+        <div className="max-w-6xl mx-auto">
+
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold tracking-widest mb-2" style={{ color: "#C0176E" }}>HOW OUR COURSES WORK</p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-black mb-3" style={{ color: "#0D1F3C" }}>
+              Two Ways to Learn
+            </h2>
+            <div className="mx-auto mb-4 rounded-full" style={{ width: "60px", height: "3px", backgroundColor: "#C0176E" }} />
+            <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Choose how you want to experience our transformational content — join live for free, or learn at your own pace.
+            </p>
+          </div>
+
+          {/* Two Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+            {/* ── Live Classes Card ── */}
+            <div
+              className="relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5"
+              style={{
+                background: "#ffffff",
+                border: "2px solid #22C55E",
+                boxShadow: "0 10px 40px rgba(34,197,94,0.1)",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 20px 50px rgba(34,197,94,0.16)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 10px 40px rgba(34,197,94,0.1)"; }}
+            >
+              {/* Top banner */}
+              <div className="px-6 pt-6 pb-5" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)" }}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl" style={{ background: "rgba(34,197,94,0.15)", border: "1.5px solid rgba(34,197,94,0.3)" }}>
+                    <Wifi size={24} style={{ color: "#16A34A" }} />
+                  </div>
+                  <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: "#16A34A", color: "#fff" }}>● LIVE</span>
+                </div>
+                <h3 className="text-xl font-heading font-extrabold mb-1" style={{ color: "#14532D" }}>Live Classes</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl font-black" style={{ color: "#16A34A" }}>FREE</span>
+                  <span className="text-sm text-gray-500 ml-1">to attend</span>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="px-6 py-5 flex flex-col gap-3 flex-grow">
+                {[
+                  "Join live sessions with Pavan Bhattad",
+                  "Interactive Q&A during every session",
+                  "All 4 courses available live",
+                  "WhatsApp group access for updates",
+                  "No registration fee, ever",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="flex-shrink-0 mt-0.5" style={{ color: "#16A34A" }} />
+                    <p className="text-sm text-gray-700 leading-snug">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="px-6 pb-6 pt-2">
+                <div style={{ borderTop: "1px solid rgba(34,197,94,0.15)", marginBottom: "16px" }} />
+                <a
+                  href="https://wa.me/919552782037"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-white text-sm font-heading font-semibold transition-all duration-200"
+                  style={{ background: "linear-gradient(90deg, #16A34A, #15803d)", boxShadow: "0 4px 14px rgba(22,163,74,0.25)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
+                >
+                  <FaWhatsapp size={16} /> Join Free — WhatsApp Group <ChevronRight size={15} />
+                </a>
+              </div>
+            </div>
+
+            {/* ── Recorded Classes Card ── */}
+            <div
+              className="relative rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5"
+              style={{
+                background: "#ffffff",
+                border: "2px solid #F59E0B",
+                boxShadow: "0 10px 40px rgba(245,158,11,0.08)",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 20px 50px rgba(245,158,11,0.15)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 10px 40px rgba(245,158,11,0.08)"; }}
+            >
+              {/* Top banner */}
+              <div className="px-6 pt-6 pb-5" style={{ background: "linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)" }}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl" style={{ background: "rgba(245,158,11,0.15)", border: "1.5px solid rgba(245,158,11,0.3)" }}>
+                    <Play size={24} style={{ color: "#D97706" }} />
+                  </div>
+                  <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: "#D97706", color: "#fff" }}>RECORDED</span>
+                </div>
+                <h3 className="text-xl font-heading font-extrabold mb-1" style={{ color: "#78350F" }}>Recorded Classes</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl font-black" style={{ color: "#D97706" }}>PAID</span>
+                  <span className="text-sm text-gray-500 ml-1">access</span>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="px-6 py-5 flex flex-col gap-3 flex-grow">
+                {[
+                  "Lifetime access to all recorded sessions",
+                  "Watch at your own pace, anytime",
+                  "Official certification upon completion",
+                  "HD quality video recordings",
+                  "Includes course materials & notes",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <Award size={18} className="flex-shrink-0 mt-0.5" style={{ color: "#D97706" }} />
+                    <p className="text-sm text-gray-700 leading-snug">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="px-6 pb-6 pt-2">
+                <div style={{ borderTop: "1px solid rgba(245,158,11,0.15)", marginBottom: "16px" }} />
+                <Link
+                  to="/courses"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-white text-sm font-heading font-semibold transition-all duration-200"
+                  style={{ background: "linear-gradient(90deg, #D97706, #B45309)", boxShadow: "0 4px 14px rgba(217,119,6,0.25)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
+                >
+                  <Video size={16} /> Explore Recorded Courses <ChevronRight size={15} />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom note */}
+          <p className="text-center text-xs mt-8" style={{ color: "#94a3b8" }}>
+            Live sessions are 100% free to attend. Certification and recorded sessions are available as paid add-ons.
+          </p>
+
         </div>
       </section>
 

@@ -18,8 +18,7 @@ const courses = [
     description:
       "Learn Speed Reading, Memory Techniques, Mind Maps and Creative Thinking.",
 
-    duration: "6 Weeks",
-    level: "Beginner",
+
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bb3605b12_1780988726_coursecards-ibrand-16.png",
     numberBg: "#1D4BC9",
     cardBg: "#ffffff",
@@ -40,8 +39,6 @@ const courses = [
     description:
       "Master the art of communication, influence and personal transformation with NLP.",
 
-    duration: "8 Weeks",
-    level: "Intermediate",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27b9ea2becc_1780988394_pavanbhattadcards-5.png",
     numberBg: "#7C3AED",
     cardBg: "#ffffff",
@@ -60,9 +57,6 @@ const courses = [
     ),
     plainTitle: "My 25th Hour",
     description: "Learn the Art of Creating Time.",
-
-    duration: "4 Weeks",
-    level: "All Levels",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a27bab564737_1780988597_pavanbhattadcards-4.png",
     numberBg: "#059669",
     cardBg: "#ffffff",
@@ -82,9 +76,6 @@ const courses = [
     plainTitle: "Brain Ki Baat",
     description:
       "Understand how your brain works and reprogram it for success and growth.",
-
-    duration: "5 Weeks",
-    level: "All Levels",
     image: "https://s3.amazonaws.com/contents.newzenler.com/33830/library/6a23a5730236d_1780721011_l-3.png",
     numberBg: "#B45309",
     cardBg: "#ffffff",
@@ -97,19 +88,13 @@ const courses = [
 ];
 
 // ── Course Image ─────────────────────────────────────────────────────────────
-function CourseImage({ image, alt, borderColor }) {
+function CourseImage({ image, alt }) {
   return (
-    <div
-      className="w-full overflow-hidden rounded-xl bg-transparent pt-4 px-2"
-      style={{
-        height: "170px",
-      }}
-    >
+    <div className="w-full aspect-[16/9] overflow-hidden bg-slate-50 relative rounded-t-2xl">
       <img
         src={image}
         alt={alt}
-        className="w-full h-full"
-        style={{ objectFit: "contain", objectPosition: "center" }}
+        className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
         loading="lazy"
       />
     </div>
@@ -159,78 +144,80 @@ function CourseCard({ course }) {
       aria-label={`View ${course.plainTitle} course`}
       onClick={handleCardClick}
       onKeyDown={(e) => e.key === "Enter" && handleCardClick()}
-      className="relative rounded-2xl p-5 sm:p-6 flex flex-col gap-5 h-full cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-accent/30 transition-transform duration-200 hover:-translate-y-1"
+      className="relative rounded-2xl flex flex-col h-full cursor-pointer overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-accent/30 transition-all duration-300 hover:-translate-y-1.5 max-w-[420px] w-full mx-auto"
       style={{
         background: course.cardBg,
         border: `1.5px solid ${course.borderColor}`,
-        boxShadow: "0 10px 30px rgba(13, 31, 60, 0.06)",
+        boxShadow: "0 10px 30px rgba(13, 31, 60, 0.04)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "0 20px 40px rgba(13, 31, 60, 0.08)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "0 10px 30px rgba(13, 31, 60, 0.04)";
       }}
     >
-      {/* Number Badge */}
-      <div
-        className="absolute top-4 left-4 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm z-10"
-        style={{ background: course.numberBg }}
-        aria-hidden="true"
-      >
-        {course.number}
-      </div>
+      {/* Top: Image */}
+      <CourseImage
+        image={course.image}
+        alt={course.plainTitle}
+      />
 
-      {/* Top: Image + Title + Description */}
-      <div className="flex flex-col gap-4">
-        <CourseImage
-          image={course.image}
-          alt={course.plainTitle}
-          borderColor={course.borderColor}
-        />
-
-        <div>
+      {/* Content Section */}
+      <div className="p-5 sm:p-6 flex flex-col gap-4 flex-grow">
+        <div className="flex flex-col gap-2.5">
+          {/* Title */}
           <h3
             className="font-bold leading-snug"
             style={{
               color: "#0D1F3C",
-              fontSize: "clamp(1.1rem, 2.5vw, 1.3rem)",
+              fontSize: "clamp(1.15rem, 2vw, 1.25rem)",
             }}
           >
             {course.title}
           </h3>
 
+          {/* Description */}
           <p
-            className="text-sm leading-relaxed mt-2"
+            className="text-sm leading-relaxed"
             style={{ color: "#475569" }}
           >
             {course.description}
           </p>
         </div>
+
+        {/* Bottom Section (Divider + Button) */}
+        <div className="flex flex-col gap-4 mt-auto">
+          {/* Divider */}
+          <div style={{ borderTop: `1px solid rgba(13,31,60,0.06)` }} />
+
+          {/* Enroll Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(course.path);
+            }}
+            className="flex items-center justify-center gap-3 rounded-xl py-3 font-semibold text-white text-base transition-all duration-200 w-full border-0"
+            style={{
+              background: course.btnBg,
+              boxShadow: "0 4px 12px rgba(13,31,60,0.1)",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "0.9";
+              e.currentTarget.style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+            aria-label={`Enroll in ${course.plainTitle}`}
+          >
+            Enroll Now. Free
+            <ArrowRight size={18} />
+          </button>
+        </div>
       </div>
-
-      {/* Divider */}
-      <div style={{ borderTop: `1px solid rgba(13,31,60,0.08)` }} />
-
-      {/* Enroll Button */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          navigate(course.path);
-        }}
-        className="flex items-center justify-center gap-3 rounded-xl py-3.5 font-semibold text-white text-base transition-all duration-200 mt-auto w-full border-0"
-        style={{
-          background: course.btnBg,
-          boxShadow: "0 4px 14px rgba(13,31,60,0.12)",
-          cursor: "pointer",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.opacity = "0.9";
-          e.currentTarget.style.transform = "translateY(-1px)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.opacity = "1";
-          e.currentTarget.style.transform = "translateY(0)";
-        }}
-        aria-label={`Enroll in ${course.plainTitle}`}
-      >
-        Enroll Now. Free
-        <ArrowRight size={18} />
-      </button>
     </article>
   );
 }
@@ -304,8 +291,8 @@ export default function Courses() {
         </header>
 
         {/* ── Grid ── */}
-        <section aria-label="Course list">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section aria-label="Course list" className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {courses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
